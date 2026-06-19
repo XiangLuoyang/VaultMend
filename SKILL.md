@@ -8,7 +8,13 @@ description: Obsidian vault quality audit + auto-fix toolchain (R1-R6). Use when
 VaultMend is a **rule-driven vault repair toolchain for Obsidian**. It audits and auto-fixes Obsidian vaults against R1-R6 quality rules (frontmatter completeness, H1 position, broken wikilinks, UTF-8 BOM, semantic consistency). The name "VaultMend" comes from "vault" + "mend" (repair), reflecting the core value: rule-based repair of vault content.
 
 > Note: The execution pipeline (Phase 1 scan → Phase 2 batch → Phase 3 verify → Phase 4 apply) is borrowed from the Loop Engineering execution paradigm (Boris Cherny / Addy Osmani, 2026), but the core value is the **R1-R6 rule set**, not the loop paradigm itself.
+## Origin
 
+This project originated as a **learning vehicle for the Loop Engineering paradigm** (Boris Cherny / Addy Osmani, 2026 community term for AI code-generation loops). The 5-phase pipeline (scan → batch → verify → apply → journal), the `autonomous` / `human-gate` execution modes, the verifier pattern, and the journal/log structure are all **direct borrowings from that paradigm**.
+
+The R1-R6 rule set emerged as the **actual reusable value** of the learning process — it solves a real problem (rule-driven vault repair) and could in principle be used with a simpler scan-and-report tool instead of the full loop pipeline. The loop pipeline is the execution means; R1-R6 is the core value.
+
+If you came here looking for the original "Loop Engineering for content vaults" framing: that's the origin, but the project has since been renamed to **VaultMend** to align the name with the actual core value. The Loop Engineering influences are preserved throughout the codebase (see `scripts/run-loop.ps1`, `.looprc.example.json`, the journal pattern).
 ## What it does
 
 - **R1** Frontmatter completeness (6 required fields)

@@ -3,7 +3,13 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **VaultMend** = rule-driven vault repair for Obsidian. Audits and auto-fixes vaults against R1-R6 quality rules (frontmatter, H1, broken wikilinks, BOM, semantic consistency). The execution pipeline is borrowed from the Loop Engineering paradigm, but the core value is the R1-R6 rule set, not the loop paradigm itself.
+## Origin
 
+This project originated as a **learning vehicle for the Loop Engineering paradigm** (Boris Cherny / Addy Osmani, 2026 community term for AI code-generation loops). The 5-phase pipeline, `autonomous` / `human-gate` execution modes, verifier pattern, and journal structure are all direct borrowings from that paradigm.
+
+The R1-R6 rule set emerged as the **actual reusable value** of the learning process — it solves a real problem (rule-driven vault repair). The loop pipeline is the execution means; R1-R6 is the core value.
+
+The project was originally named "Loopen" (= Loop + Open / Open Loop). It was renamed to **VaultMend** (= vault + mend, repair) after a self-challenge surfaced that the name was misleading: "Loopen" implied the loop paradigm was the core, when in fact the R1-R6 rule set is. The loop paradigm remains a core design influence throughout the codebase.
 ## What it does
 
 | Rule | Description | Auto-fix? |
