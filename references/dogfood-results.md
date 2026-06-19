@@ -1,6 +1,6 @@
 # Dogfood 战绩 (≥ 7 个独立 target)
 
-> Dogfood = 用 Loopen 工具链 audit + 修 Loopen 自身（or 任意 Obsidian vault）。
+> Dogfood = 用 VaultMend 工具链 audit + 修 VaultMend 自身（or 任意 Obsidian vault）。
 > "独立 target" = 至少 1 个差异轴 (size / topic / broken count / file type)。
 > 单 target PASS 不足以下结论"pipeline OK"。
 

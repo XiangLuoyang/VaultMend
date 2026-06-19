@@ -1,6 +1,6 @@
-# Examples Vault (Demo for Loopen)
+# Examples Vault (Demo for VaultMend)
 
-This is a **demo vault** for dogfooding Loopen. It contains 4 .md files that violate R1-R3 in different ways.
+This is a **demo vault** for dogfooding VaultMend. It contains 4 .md files that violate R1-R3 in different ways.
 
 ## Files
 
@@ -21,7 +21,7 @@ cp .looprc.example.json .looprc.json
 powershell -File ..\..\scripts\phase1-auto.ps1 -Scope "examples/vault"
 
 # 3. Inspect generated task dir
-ls loopen-tasks/   # default output dir; configurable via .looprc.json
+ls vaultmend-tasks/   # default output dir; configurable via .looprc.json
 
 # 4. Run Phase 2 (apply)
 powershell -File ..\..\scripts\phase2-batch.ps1 -Limit 5 -DryRun

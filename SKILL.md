@@ -1,11 +1,13 @@
 ---
-name: loopen
-description: Obsidian vault quality audit + auto-fix toolchain (R1-R6). Use when running vault lint, applying loop fixes, batch-fixing broken wikilinks or frontmatter, or reading Loopen run logs.
+name: vaultmend
+description: Obsidian vault quality audit + auto-fix toolchain (R1-R6). Use when running vault lint, applying loop fixes, batch-fixing broken wikilinks or frontmatter, or reading VaultMend run logs.
 ---
 
-# Loopen Skill
+# VaultMend Skill
 
-Loopen = Loop Engineering for content vaults. Audits and auto-fixes Obsidian vaults against R1-R6 quality rules.
+VaultMend is a **rule-driven vault repair toolchain for Obsidian**. It audits and auto-fixes Obsidian vaults against R1-R6 quality rules (frontmatter completeness, H1 position, broken wikilinks, UTF-8 BOM, semantic consistency). The name "VaultMend" comes from "vault" + "mend" (repair), reflecting the core value: rule-based repair of vault content.
+
+> Note: The execution pipeline (Phase 1 scan → Phase 2 batch → Phase 3 verify → Phase 4 apply) is borrowed from the Loop Engineering execution paradigm (Boris Cherny / Addy Osmani, 2026), but the core value is the **R1-R6 rule set**, not the loop paradigm itself.
 
 ## What it does
 
@@ -18,11 +20,11 @@ Loopen = Loop Engineering for content vaults. Audits and auto-fixes Obsidian vau
 
 ## When to trigger
 
-Run Loopen when the user:
+Run VaultMend when the user:
 - asks to "lint the vault" / "scan the vault" / "check for broken links"
 - asks to "fix R1 / R2 / R3" / "apply loop fixes" / "auto-fix the vault"
-- wants to inspect Loopen run history / progress
-- wants to pack Loopen into a skill or upgrade its version
+- wants to inspect VaultMend run history / progress
+- wants to pack VaultMend into a skill or upgrade its version
 
 ## Tools
 
@@ -80,7 +82,7 @@ See `references/powershell-debt.md` for the full writeup.
 ## Repository structure
 
 ```
-Loopen/
+VaultMend/
 ├── SKILL.md                      # this file
 ├── README.md                     # 3-step onboarding
 ├── LICENSE                       # MIT
@@ -113,14 +115,14 @@ Loopen/
 2. Edit `.looprc.json` → set `defaults.vault_path` to your Obsidian vault
 3. `powershell -File .\scripts\sanity-check.ps1` (verify env)
 4. `powershell -File .\scripts\phase1-auto.ps1 -DryRun` (preview)
-5. `powershell -File .\scripts\phase1-auto.ps1` (real run → generates task dirs in `loopen-tasks/`)
+5. `powershell -File .\scripts\phase1-auto.ps1` (real run → generates task dirs in `vaultmend-tasks/`)
 6. `powershell -File .\scripts\run-loop.ps1 -TaskDir <task> -Action all` (apply)
 
-## Loopen vs. Addy Osmani's Loop Engineering (community)
+## Execution paradigm (borrowed from Loop Engineering)
 
-This project is a **coincidental name overlap** with Addy Osmani's 2026 community term for "code-generation loops." Loopen is for **content-quality loops** (vault audit), not code generation.
+The 5-phase pipeline (scan → batch → verify → apply → journal) borrows from the **Loop Engineering** execution paradigm (Boris Cherny / Addy Osmani, 2026 community term for AI code-generation loops). This is an **execution means, not the core value** — VaultMend's core value is the R1-R6 rule set; the loop pipeline is one way to organize the execution, and could in principle be replaced by a simpler scan+report tool.
 
-| Dimension | Community Loop Engineering | Loopen |
+| Dimension | Community Loop Engineering | VaultMend |
 |-----------|----------------------------|--------|
 | Core scenario | AI writes code overnight | AI audits + fixes vault content |
 | Execution unit | Single loop, runs to completion | Multi-task batch (5-phase pipeline per task) |

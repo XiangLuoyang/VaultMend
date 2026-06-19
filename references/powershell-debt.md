@@ -1,7 +1,7 @@
 # PowerShell 5.1 系统债 (4 条硬性规则)
 
 > Windows PowerShell 5.1 (Desktop edition) 是 Windows 内置默认 shell，与 PowerShell 7+ 行为不一致。
-> Loopen 工具链**仅**依赖 PS 5.1 + .NET API。下列 4 条债是从 v0.1-v0.9 实战中沉淀的硬性规则。
+> VaultMend 工具链**仅**依赖 PS 5.1 + .NET API。下列 4 条债是从 v0.1-v0.9 实战中沉淀的硬性规则。
 
 ## 债 1: Get-Content 读 UTF-8 中文 → mojibake
 
@@ -65,5 +65,5 @@ $body = $fmMatch.Groups['body'].Value
 ## 可复用的 lesson
 
 - 任何调用 stdout / 文件 API 的链路都要显式切到 .NET / git 自身 UTF-8 通道
-- Windows 终端环境对 UTF-8 **非原生**支持是 Loopen 工具栈的**系统性底层债**
+- Windows 终端环境对 UTF-8 **非原生**支持是 VaultMend 工具栈的**系统性底层债**
 - 这 4 条债是**踩坑治本**后的稳态，新加 PS 脚本时**先验证是否踩这 4 条**

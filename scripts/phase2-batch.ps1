@@ -1,9 +1,9 @@
-# Loopen — Obsidian vault quality audit + auto-fix toolchain
-# https://github.com/XiangLuoyang/Loopen
+# VaultMend — Obsidian vault quality audit + auto-fix toolchain
+# https://github.com/XiangLuoyang/VaultMend
 #
 # Licensed under the MIT License. See LICENSE in the project root.
 
-# loopen Phase 2 batch (v0.3)
+# vaultmend Phase 2 batch (v0.3)
 # Process all auto-generated task dirs from phase1-auto.ps1
 # For each task dir: read prd.json -> generate patches -> verify -> apply -> commit
 #

@@ -1,9 +1,9 @@
-# Loopen — Obsidian vault quality audit + auto-fix toolchain
-# https://github.com/XiangLuoyang/Loopen
+# VaultMend — Obsidian vault quality audit + auto-fix toolchain
+# https://github.com/XiangLuoyang/VaultMend
 #
 # Licensed under the MIT License. See LICENSE in the project root.
 
-# loopen Phase 1 auto (v0.3 → v0.9 改 scope)
+# vaultmend Phase 1 auto (v0.3 → v0.9 改 scope)
 # v0.2 → v0.3 变化：
 # - v0.2: 手动挑 target + 写 prd.json
 # - v0.3: 自动扫 vault + 检测 R1/R2/R3/R5 violation + 生成 per-file prd.json + patches

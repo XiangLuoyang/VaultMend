@@ -5,7 +5,7 @@ updated: 2026-06-19
 type: example
 status: active
 narrative: practical
-tags: [example, loopen-demo]
+tags: [example, vaultmend-demo]
 summary: Demonstrates R2 violation: H1 is the first line; abstract comes after.
 ---
 
@@ -16,7 +16,7 @@ summary: Demonstrates R2 violation: H1 is the first line; abstract comes after.
 
 ## Section
 
-Loopen will see this file as:
+VaultMend will see this file as:
 - R1: frontmatter complete ✓
 - R2: H1 (line 11) is BEFORE the `> [!abstract]` block (line 13) → R2 violation
 - R3: no broken wikilinks

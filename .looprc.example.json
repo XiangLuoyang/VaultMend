@@ -1,5 +1,5 @@
 {
-  "_note": "Loopen config template. Copy to .looprc.json and edit. See references/R1-R6-rules.md for rule definitions.",
+  "_note": "VaultMend config template. Copy to .looprc.json and edit. See references/R1-R6-rules.md for rule definitions.",
 
   "version": "0.6",
 

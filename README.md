@@ -1,8 +1,8 @@
-# Loopen — Obsidian Vault Quality Audit + Auto-Fix
+# VaultMend — Obsidian Vault Quality Audit + Auto-Fix
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Loopen** = Loop Engineering for content vaults. Audits and auto-fixes Obsidian vaults against R1-R6 quality rules, designed for autonomous operation (AI-driven, no manual gate per fix).
+**VaultMend** = rule-driven vault repair for Obsidian. Audits and auto-fixes vaults against R1-R6 quality rules (frontmatter, H1, broken wikilinks, BOM, semantic consistency). The execution pipeline is borrowed from the Loop Engineering paradigm, but the core value is the R1-R6 rule set, not the loop paradigm itself.
 
 ## What it does
 
@@ -19,8 +19,8 @@
 
 ```powershell
 # 1. Clone
-git clone https://github.com/XiangLuoyang/Loopen.git
-cd Loopen
+git clone https://github.com/XiangLuoyang/VaultMend.git
+cd VaultMend
 
 # 2. Configure
 cp .looprc.example.json .looprc.json
@@ -42,7 +42,7 @@ See [SKILL.md](SKILL.md) for the full skill definition (OpenClaw skill format).
 ## Architecture
 
 ```
-Loopen/
+VaultMend/
 ├── SKILL.md              ← OpenClaw skill entry
 ├── README.md             ← this file
 ├── .looprc.example.json  ← config template
@@ -65,11 +65,11 @@ Loopen/
 run-loop.ps1 -TaskList "task1\|task2\|task3" -MaxConcurrency 3
 ```
 
-## Loopen vs. community Loop Engineering
+## VaultMend vs. community Loop Engineering
 
-Coincidental name overlap with [Addy Osmani's 2026 community term](https://addyosmani.com/blog) for "code-generation loops." Loopen is for **content-quality loops** (Obsidian vault audit), not code generation.
+Coincidental name overlap with [Addy Osmani's 2026 community term](https://addyosmani.com/blog) for "code-generation loops." VaultMend is for **content-quality loops** (Obsidian vault audit), not code generation.
 
-| Dimension | Community Loop Engineering | Loopen |
+| Dimension | Community Loop Engineering | VaultMend |
 |-----------|---------------------------|--------|
 | Core scenario | AI writes code overnight | AI audits + fixes vault content |
 | Execution unit | Single loop, runs to completion | Multi-task batch (5-phase pipeline) |

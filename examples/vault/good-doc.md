@@ -5,7 +5,7 @@ updated: 2026-06-19
 type: example
 status: active
 narrative: practical
-tags: [example, loopen-demo]
+tags: [example, vaultmend-demo]
 summary: A baseline .md file that passes R1-R6 verifier.
 ---
 
@@ -18,7 +18,7 @@ This is a baseline .md file that should pass R1-R6 verifier.
 
 ## Section
 
-Loopen will see this file as:
+VaultMend will see this file as:
 - R1: frontmatter complete (6 fields)
 - R2: H1 is after the `> [!abstract]` block ✓
 - R3: no broken wikilinks (no `[[...]]` links)

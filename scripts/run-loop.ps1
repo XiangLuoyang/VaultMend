@@ -1,9 +1,9 @@
-# Loopen — Obsidian vault quality audit + auto-fix toolchain
-# https://github.com/XiangLuoyang/Loopen
+# VaultMend — Obsidian vault quality audit + auto-fix toolchain
+# https://github.com/XiangLuoyang/VaultMend
 #
 # Licensed under the MIT License. See LICENSE in the project root.
 
-# loopen runner (v0.2 + v0.8.2)
+# vaultmend runner (v0.2 + v0.8.2)
 # Runs Phase 2.5 (patch validation) + Phase 3 (verification) + Phase 4 (summary) for an existing task.
 #
 # Usage:

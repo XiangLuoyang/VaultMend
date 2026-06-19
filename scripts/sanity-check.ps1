@@ -1,9 +1,9 @@
-# Loopen — Obsidian vault quality audit + auto-fix toolchain
-# https://github.com/XiangLuoyang/Loopen
+# VaultMend — Obsidian vault quality audit + auto-fix toolchain
+# https://github.com/XiangLuoyang/VaultMend
 #
 # Licensed under the MIT License. See LICENSE in the project root.
 
-# loopen sanity check (v0.1)
+# vaultmend sanity check (v0.1)
 # Verifies directory structure + apply/discard paths work as designed.
 # Does NOT actually run a lint loop — only tests the plumbing.
 
@@ -61,8 +61,8 @@ if (Test-Path $logPath) {
 
 # 4. create a fake task directory (NOT commit, just verify path works)
 Write-Host ""
-Write-Host "[4] Create fake task dir (loopen-test)" -ForegroundColor Yellow
-$taskName = "loopen-sanity-test"
+Write-Host "[4] Create fake task dir (vaultmend-test)" -ForegroundColor Yellow
+$taskName = "vaultmend-sanity-test"
 $taskDir = "$root\$taskName\$ts"
 $paths = @(
     "$taskDir",
@@ -144,7 +144,7 @@ Write-Host ""
 Write-Host "[7] Verify git commit scope" -ForegroundColor Yellow
 Set-Location (Split-Path -Parent $root)
 $gitStatus = git status --short 2>&1
-$loopChanges = $gitStatus | Where-Object { $_ -match "scripts/loopen|scripts/" }
+$loopChanges = $gitStatus | Where-Object { $_ -match "scripts/vaultmend|scripts/" }
 Write-Host "  Files changed under loop/: $($loopChanges.Count)"
 foreach ($c in $loopChanges) {
     Write-Host "    $c"
@@ -154,5 +154,5 @@ Write-Host ""
 Write-Host "=== Sanity Check PASSED ===" -ForegroundColor Green
 Write-Host ""
 Write-Host "v0.1 plumbing is working. Ready for first real dogfood run."
-Write-Host "To dogfood: sessions_spawn the loopen skill against the current vault."
+Write-Host "To dogfood: sessions_spawn the vaultmend skill against the current vault."
 Write-Host ""

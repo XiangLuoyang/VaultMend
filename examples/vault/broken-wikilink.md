@@ -5,7 +5,7 @@ updated: 2026-06-19
 type: example
 status: active
 narrative: practical
-tags: [example, loopen-demo]
+tags: [example, vaultmend-demo]
 summary: Demonstrates R3 violation: references [[nonexistent-doc]] which doesn't exist.
 ---
 
@@ -18,7 +18,7 @@ See also: [[nonexistent-doc]] and [[another-missing-page]].
 
 ## Section
 
-Loopen will see this file as:
+VaultMend will see this file as:
 - R1: frontmatter complete ✓
 - R2: H1 is after the abstract ✓
 - R3: two broken wikilinks → R3 violation

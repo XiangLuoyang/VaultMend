@@ -1,6 +1,6 @@
 # R1-R6 规则定义
 
-Loopen 对 Obsidian vault 做质量审查的 6 条规则。规则集可扩展（新增 R7、R8 写在新增章节，**不**改本节）。
+VaultMend 对 Obsidian vault 做质量审查的 6 条规则。规则集可扩展（新增 R7、R8 写在新增章节，**不**改本节）。
 
 ## R1: frontmatter 完整性
 
