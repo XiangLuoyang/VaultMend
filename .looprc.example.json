@@ -1,0 +1,60 @@
+{
+  "_note": "Loopen config template. Copy to .looprc.json and edit. See references/R1-R6-rules.md for rule definitions.",
+
+  "version": "0.6",
+
+  "execution": {
+    "mode": "autonomous",
+    "description": "autonomous = verifier pass + auto-apply + journal. human-gate = verifier pass + summary + wait for human review (legacy).",
+    "auto_apply_on_pass": true,
+    "decision_by_autonomous": "AI:autonomous"
+  },
+
+  "journal": {
+    "enabled": true,
+    "dir": "journals/",
+    "filename_pattern": "journal-{task}-{ts}.md",
+    "push_feishu": false
+  },
+
+  "log": {
+    "path": "scripts/_log.jsonl",
+    "format": "jsonl",
+    "fields": [
+      "ts",
+      "task",
+      "run_id",
+      "action",
+      "status",
+      "items_total",
+      "items_verified",
+      "max_iter",
+      "max_tokens",
+      "decision_by",
+      "note"
+    ]
+  },
+
+  "archive": {
+    "policy": "append-only",
+    "discard_dir": "scripts/_archive/_discarded/",
+    "applied_dir": "scripts/_archive/"
+  },
+
+  "completion_promise": {
+    "enabled": false,
+    "field": "completion.promise",
+    "note": "placeholder for v1.0 iterative loop"
+  },
+
+  "defaults": {
+    "max_iter": 5,
+    "max_tokens": 500000,
+    "timeout_seconds": 1800,
+    "verifier_required": true,
+    "phase_gate_every_n_items": 1,
+    "scope": "examples/vault",
+    "_vault_path_help": "Edit this to point to your actual Obsidian vault. Use forward slashes or escaped backslashes.",
+    "vault_path": "/path/to/your/obsidian/vault"
+  }
+}
